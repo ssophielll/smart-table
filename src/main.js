@@ -27,6 +27,10 @@ function collectState() {
 
     return { 
         ...state,
+        total: [
+            state.totalFrom ? Number(state.totalFrom) : undefined,
+            state.totalTo ? Number(state.totalTo) : undefined
+        ],
         rowsPerPage,
         page
     };
